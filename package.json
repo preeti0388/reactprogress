@@ -1,25 +1,21 @@
 {
-  "name": "react-sweet-progress",
+  "name": "react-progress",
   "version": "1.1.1",
   "description": "",
+    "homepage": "https://preeti0388.github.io/reactprogress",
   "main": "lib/index.js",
   "scripts": {
     "clean:lib": "del lib",
     "start": "npm i && cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.babel.js",
     "build:lib": "cross-env NODE_ENV=production webpack ./src/index.js --config ./config/webpack.production.config.babel.js",
     "build": "npm run clean:lib && npm run build:lib",
-    "pack": "npm run build && npm pack"
+    "pack": "npm run build && npm pack",
+     "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/abraztsov/react-sweet-progress.git"
-  },
-  "author": "Nikita Abraztsov (https://github.com/abraztsov)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/abraztsov/react-sweet-progress/issues"
-  },
-  "homepage": "https://github.com/abraztsov/react-sweet-progress#readme",
+  
+  
+
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "babel-cli": "^6.24.0",
